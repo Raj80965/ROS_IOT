@@ -81,7 +81,7 @@ graph TD
 
 ### Step 0: Clone the Repository
 ```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/ROS_IOT.git
+git clone https://github.com/Raj80965/ROS_IOT.git
 cd ROS_IOT
 ```
 
@@ -194,3 +194,4 @@ ROS_IOT/
 - **Name:** Raj Rajguru
 - **Role:** Robotics Software Intern Candidate
 - **Organization:** Antropi Robotics Assignment
+- **GitHub:** [Raj80965/ROS_IOT](https://github.com/Raj80965/ROS_IOT)
