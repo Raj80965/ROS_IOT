@@ -59,7 +59,6 @@ def main():
     else:
         print("[ERROR] Goal returned invalid status.")
 
-    navigator.lifecycleShutdown()
     rclpy.shutdown()
 
 

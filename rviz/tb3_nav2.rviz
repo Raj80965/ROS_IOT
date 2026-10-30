@@ -59,7 +59,7 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /robot_description
-      Enabled: false
+      Enabled: true
       Links:
         All Links Enabled: true
         Expand Joint Details: false
@@ -72,7 +72,7 @@ Visualization Manager:
       Name: RobotModel
       TF Prefix: ""
       Update Interval: 0
-      Value: false
+      Value: true
       Visual Enabled: true
     - Class: rviz_default_plugins/TF
       Enabled: true
@@ -561,21 +561,21 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -1.575799584388733
-      Class: rviz_default_plugins/TopDownOrtho
-      Enable Stereo Rendering:
-        Stereo Eye Separation: 0.05999999865889549
-        Stereo Focal Distance: 1
-        Swap Stereo Eyes: false
-        Value: false
+      Class: rviz_default_plugins/Orbit
+      Distance: 7.0
+      Focal Point:
+        X: 0.0
+        Y: 0.0
+        Z: 0.0
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05
       Invert Z Axis: false
       Name: Current View
-      Near Clip Distance: 0.009999999776482582
-      Scale: 95.16645050048828
+      Near Clip Distance: 0.01
+      Pitch: 0.65
       Target Frame: <Fixed Frame>
-      Value: TopDownOrtho (rviz_default_plugins)
-      X: 1.3291430473327637
-      Y: 0.30778273940086365
+      Value: Orbit (rviz_default_plugins)
+      Yaw: -1.57
     Saved: ~
 Window Geometry:
   Displays:

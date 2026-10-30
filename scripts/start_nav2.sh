@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 # Start Nav2 Stack and RViz2 with simulation time and custom params
 source /opt/ros/jazzy/setup.bash
-export TURTLEBOT3_MODEL=burger
+# Support both burger and waffle
+export TURTLEBOT3_MODEL="${TURTLEBOT3_MODEL:-burger}"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WORKSPACE_DIR="$(dirname "$SCRIPT_DIR")"
 
 MAP_PATH="$WORKSPACE_DIR/maps/map.yaml"
-PARAMS_PATH="$WORKSPACE_DIR/params/nav2_params.yaml"
+if [ "$TURTLEBOT3_MODEL" = "waffle" ]; then
+    PARAMS_PATH="$WORKSPACE_DIR/params/waffle_params.yaml"
+else
+    PARAMS_PATH="$WORKSPACE_DIR/params/nav2_params.yaml"
+fi
 RVIZ_PATH="$WORKSPACE_DIR/rviz/tb3_nav2.rviz"
 
 echo "[INFO] Starting Nav2 Stack with AMCL and RViz2..."
