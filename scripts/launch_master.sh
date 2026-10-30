@@ -8,6 +8,14 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
 export QT_QPA_PLATFORM=xcb
 source /opt/ros/jazzy/setup.bash
 
+# Performance optimizations for WSL2
+export LIBGL_ALWAYS_SOFTWARE=0
+export GZ_SIM_RESOURCE_PATH=/usr/share/gazebo-11
+export MESA_GL_VERSION_OVERRIDE=3.3
+export __GL_THREADED_OPTIMIZATIONS=1
+# Reduce Gazebo physics load
+export GZ_SIM_SERVER_CONFIG_PATH=""
+
 # Sanitize model argument
 MODEL_ARG="${1:-${TURTLEBOT3_MODEL:-burger}}"
 export TURTLEBOT3_MODEL="$(echo "$MODEL_ARG" | tr -d "'\"[:space:]")"
